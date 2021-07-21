@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Find free legal advice</h1>
+
+    <p class="govuk-body-l">Based on your postcode and filters, these are the organisations we’ve found.</p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-8">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postcode
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-width-two-thirds">
+          <strong class="govuk-tag govuk-tag--grey">{{ data['postcode'] }}</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/v2" class="govuk-link govuk-link--no-visited-state">
+            Change<span class="govuk-visually-hidden"> postcode</span>
+          </a>
+        </dd>
+      </div>
+
+      {% if data['org_name'] %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-width-two-thirds">
+          <strong class="govuk-tag govuk-tag--grey">{{ data['org_name'] }}</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/v2" class="govuk-link govuk-link--no-visited-state">
+            Change<span class="govuk-visually-hidden"> organisation name</span>
+          </a>
+        </dd>
+      </div>
+      {% endif %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Availability
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-width-two-thirds">
+          <strong class="govuk-tag govuk-tag--grey">{% if data['available'] %}Only with availability{% else %}Any availability{% endif %}</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/v2" class="govuk-link govuk-link--no-visited-state">
+            Change<span class="govuk-visually-hidden"> availability</span>
+          </a>
+        </dd>
+      </div>
+
+      {% if data['category'] or data['person'] %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Filters
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-width-two-thirds">
+          {% if data['category'] %}
+          <strong class="govuk-tag govuk-tag--grey">{{ data['category'] }}</strong>
+          {% endif %}
+
+          {% if data['person'] %}
+          <strong class="govuk-tag govuk-tag--grey">{{ data['person'] }}</strong>
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/v2" class="govuk-link govuk-link--no-visited-state">
+            Change<span class="govuk-visually-hidden"> filters</span>
+          </a>
+        </dd>
+      </div>
+      {% endif %}
+    </dl>
+
+    <p class="govuk-body">
+      {% if data['available'] %}
+        Showing closest 3 results out of 3 found based on your filters.
+      {% else %}
+        Showing closest 5 results out of 37 found based on your filters.
+      {% endif %}
+    </p>
+
+    <div class="app--results-item-box">
+      <h2 class="govuk-heading-m">
+        Back On Track Housing
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-3 app--tag-middle">
+          Available
+        </strong>
+      </h2>
+
+      <p class="govuk-body">
+        Back on Track Housing is a charity organisation which aims to support vulnerable person/family prior to and on release to prevent homelessness, the chain of cycles of homelessness ... <a href="" class="govuk-link">read more</a>
+      </p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">
+            <a href="https://backontrackhousing.co.uk" target="_blank" rel="nofollow noreferrer">Visit website ›</a>
+          </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">Distance: 0.1 miles</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">☎ 020 7267 7077</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="app--results-item-box">
+      <h2 class="govuk-heading-m">
+        Clarion Housing
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-3 app--tag-middle">
+          Available
+        </strong>
+      </h2>
+
+      <p class="govuk-body">
+        Advice offered on a number of subjects: Money/Benefits ... <a href="" class="govuk-link">read more</a>
+      </p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">
+            <a href="http://www.myclarionhousing.com" target="_blank" rel="nofollow noreferrer">Visit website ›</a>
+          </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">Distance: 0.1 miles</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">☎ 0300 500 8000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="app--results-item-box">
+      <h2 class="govuk-heading-m">
+        Housing Justice
+
+        <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-left-3 app--tag-middle">
+          Slightly Busy
+        </strong>
+      </h2>
+
+      <p class="govuk-body">
+        Umbrella body for churches and church-linked projects and individuals involved in action on homelessness and housing need. Practical support for churches ... <a href="" class="govuk-link">read more</a>
+      </p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">
+            <a href="http://www.housingjustice.org.uk" target="_blank" rel="nofollow noreferrer">Visit website ›</a>
+          </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">Distance: 0.1 miles</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">☎ 0203 752 5635</p>
+        </div>
+      </div>
+    </div>
+
+    {% if not data['available'] %}
+    <div class="app--results-item-box">
+      <h2 class="govuk-heading-m">
+        LB Islington - Housing
+
+        <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-3 app--tag-middle">
+          Busy
+        </strong>
+      </h2>
+
+      <p class="govuk-body">
+        Referrals to Islington Supporting People funded supported housing projects - includes accommodation for ex-offenders, young people, those with drug and alcohol ... <a href="" class="govuk-link">read more</a>
+      </p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">
+            <a href="http://www.islington.gov.uk" target="_blank" rel="nofollow noreferrer">Visit website ›</a>
+          </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">Distance: 0.2 miles</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">☎ 020 7527 5300</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="app--results-item-box">
+      <h2 class="govuk-heading-m">
+        Housing for Women – Greenwich Domestic Abuse Services
+
+        <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-3 app--tag-middle">
+          Busy
+        </strong>
+      </h2>
+
+      <p class="govuk-body">
+        Provide support and refuge for women and their children experiencing domestic abuse. Also provide a telephone help line for women nationally and floating support ... <a href="" class="govuk-link">read more</a>
+      </p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">
+            <a href="http://www.hfw.org.uk/" target="_blank" rel="nofollow noreferrer">Visit website ›</a>
+          </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">Distance: 0.3 miles</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">☎ 020 8317 8273</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <button class="govuk-button govuk-button--secondary">Previous page</button>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body" align="right">
+          <button class="govuk-button govuk-button--secondary">Next page</button>
+        </p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
