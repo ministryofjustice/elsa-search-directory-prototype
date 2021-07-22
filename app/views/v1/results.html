@@ -4,11 +4,15 @@
 Search results
 {% endblock %}
 
+{% block beforeContent %}
+<a class="govuk-back-link" href="/v1">Back</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Find free legal advice</h1>
+    <h1 class="govuk-heading-xl">Organisations found</h1>
 
     <p class="govuk-body-l">Based on your postcode and filters, these are the organisations we’ve found.</p>
 
