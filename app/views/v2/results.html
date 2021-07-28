@@ -47,20 +47,6 @@ Search results
       </div>
       {% endif %}
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Availability
-        </dt>
-        <dd class="govuk-summary-list__value govuk-!-width-two-thirds">
-          <strong class="govuk-tag govuk-tag--grey">{% if data['available'] %}Only with availability{% else %}Any availability{% endif %}</strong>
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="/v2" class="govuk-link govuk-link--no-visited-state">
-            Change<span class="govuk-visually-hidden"> availability</span>
-          </a>
-        </dd>
-      </div>
-
       {% if data['category'] or data['person'] %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -82,6 +68,20 @@ Search results
         </dd>
       </div>
       {% endif %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Appointments
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-width-two-thirds">
+          <strong class="govuk-tag govuk-tag--grey">{% if data['available'] %}Only with availability{% else %}Any availability{% endif %}</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/v2" class="govuk-link govuk-link--no-visited-state">
+            Change<span class="govuk-visually-hidden"> availability</span>
+          </a>
+        </dd>
+      </div>
     </dl>
 
     <p class="govuk-body">
