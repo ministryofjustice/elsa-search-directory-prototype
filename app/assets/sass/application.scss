@@ -46,9 +46,8 @@ $govuk-assets-path: '/govuk/assets/';
   padding-left: 0 !important;
 }
 
-.gsc-result {
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
+.gsc-resultsbox-visible {
+  margin-top: 20px;
 }
 
 .gs-visibleUrl-breadcrumb {
@@ -56,12 +55,17 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 a.gs-title {
+  @include govuk-link-common;
+
+  text-decoration: underline !important;
   font-size: 19px !important;
 
   b { font-size: 19px !important; }
 }
 
 .gsc-table-cell-snippet-close {
+  @extend .govuk-body;
+  margin-bottom: 10px;
   font-size: 16px !important;
 }
 
