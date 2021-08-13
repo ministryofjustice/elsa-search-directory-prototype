@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Contact details
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/v3/contact/area">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Contact details</span>
+      Back On Track Housing
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v3/contact/outcome" class="" novalidate="">
+      {{ govukRadios({
+      idPrefix: "service_level",
+      name: "service_level",
+      fieldset: {
+      legend: {
+      text: "What is the service you require?",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--m"
+      }
+      },
+      hint: {
+        text: "Advice is likely to be more simple but if you want someone to do case management or represent you, they may have a monetary ceiling based on their insurance."
+      },
+      items: [
+      {
+      value: "Advice",
+      text: "Advice",
+      checked: checked("service_level", "Advice")
+      },
+      {
+      value: "Case management",
+      text: "Case management",
+      checked: checked("service_level", "Case management")
+      },
+      {
+      value: "Representation",
+      text: "Representation",
+      checked: checked("service_level", "Representation")
+      }
+      ]
+      }) }}
+
+      <div class="form-group">
+        <button type="submit" class="govuk-button">Continue</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
