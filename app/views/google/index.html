@@ -1,27 +1,23 @@
 {% extends "layout.html" %}
 
-{% set serviceName %}
-Find legal advice and support
-{% endset %}
-
 {% block pageTitle %}
-{{ serviceName }}
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
-<div class="container govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-  </div>
-
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body-l">Search for legal advice and support resources.</p>
+    <h2 class="govuk-heading-l">Custom google search</h2>
 
-    <script async src="https://cse.google.com/cse.js?cx=35494a494c787b70b"></script>
-    <div class="gcse-search" data-personalizedAds="false"></div>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="/google/v1">Prototype v1 (unstyled)</a>
+      </li>
+      <li>
+        <a href="/google/v2">Prototype v2 (styled)</a>
+      </li>
+    </ul>
   </div>
 </div>
 

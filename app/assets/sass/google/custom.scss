@@ -1,0 +1,76 @@
+// Google custom search
+//
+.gsc-control-cse {
+  padding-left: 0 !important;
+}
+
+.gsc-resultsbox-visible {
+  margin-top: 20px;
+}
+
+// Unstyled version (little styling)
+//
+#app--unstyled-cse {
+  a.gs-title {
+    text-decoration: underline !important;
+    font-size: 19px !important;
+
+    b { font-size: 19px !important; }
+  }
+
+  .gsc-table-cell-snippet-close {
+    @extend .govuk-body;
+    margin-bottom: 0;
+    font-size: 16px !important;
+  }
+}
+
+// Styled (more hardcore govuk branding)
+//
+#app--styled-cse {
+  .gs-visibleUrl-breadcrumb {
+    visibility: hidden;
+  }
+
+  a.gs-title {
+    @include govuk-link-common;
+
+    text-decoration: underline !important;
+    font-size: 19px !important;
+
+    b { font-size: 19px !important; }
+  }
+
+  .gsc-table-cell-snippet-close {
+    @extend .govuk-body;
+    margin-bottom: 10px;
+    font-size: 16px !important;
+  }
+
+  .gsc-cursor-box {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .gsc-cursor-page {
+    border: 1px solid #b1b4b6;
+    padding: 5px;
+  }
+
+  .gcsc-more-maybe-branding-root {
+    display: none !important;
+  }
+}
+
+// Styling that applies to both versions
+//
+#app--unstyled-cse, #app--styled-cse {
+  .gsc-cursor {
+    font-size: 16px !important;
+  }
+
+  // For internal test purposes we hide the ads
+  .gsc-adBlock {
+    display: none !important;
+  }
+}
