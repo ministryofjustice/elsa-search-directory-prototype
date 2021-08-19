@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Organisation details
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/v5/results">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Organisation details</span>
+
+      Back On Track Housing
+
+      <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-3 app--tag-middle">
+        Available
+      </strong>
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds" style="border-right: 1px solid #ccc;">
+    <h2 class="govuk-heading-l">
+      About us
+    </h2>
+
+    <p class="govuk-body">
+      Back on Track Housing is a charity organisation which aims to support vulnerable person/family prior to and on
+      release to prevent homelessness, the chain of cycles of homelessness and re-offending among who are not eligible
+      under the Housing Act. We provide hand-holding services to bridge the gap and relieve poverty among homeless and
+      vulnerable person. We seek to help these vulnerable family and young single adult to build a new life by find
+      suitable and sustainable accommodation through private landlords that accept Housing benefit.
+    </p>
+
+    <h2 class="govuk-heading-l">
+      Services offered
+    </h2>
+
+    <p class="govuk-body">
+      Advice, Practical help.
+    </p>
+
+    <h2 class="govuk-heading-l">
+      Areas of law
+    </h2>
+
+    <p class="govuk-body">
+      Education and training, Accommodation, Housing rights.
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <a class="govuk-button" href="/v5/contact">Contact details</a>
+
+    <h3 class="govuk-heading-m">
+      More actions
+    </h3>
+
+    <p class="govuk-body">
+      <a href="https://backontrackhousing.co.uk" target="_blank" rel="nofollow noreferrer">Visit website</a>
+    </p>
+
+    <p class="govuk-body"><a href="">Save to favourites</a></p>
+
+    <p class="govuk-body"><a href="javascript:window.print()">Print this page</a></p>
+  </div>
+</div>
+
+{% endblock %}
