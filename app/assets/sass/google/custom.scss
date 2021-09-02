@@ -1,5 +1,12 @@
 // Google custom search
 //
+ul.app--query-examples {
+  li {
+    display: inline;
+    margin-right: 10px;
+  }
+}
+
 .gsc-control-cse {
   padding-left: 0 !important;
 }
