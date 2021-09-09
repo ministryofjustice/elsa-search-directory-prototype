@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Find free legal advice
+{{ serviceName }}
 {% endblock %}
 
 {% block content %}
@@ -9,37 +9,29 @@ Find free legal advice
 <div class="container govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">
-      Find free legal advice
+      {{ serviceName }}
     </h1>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body-l">Search for free legal advice in England and Wales. Some organisations cover all areas of law, others offer specialist advice.</p>
+    <p class="govuk-body-l">Search for free and affordable advice in England and Wales. Some organisations cover all areas of law, while others only offer specialist advice in certain areas.</p>
   </div>
 
   <div class="govuk-grid-column-full">
     <form action="/v6/results" class="" novalidate="">
       <div class="govuk-form-group" id="fala_questions">
 
-        <div class="govuk-form-group govuk-form-group" id="field-postcode">
+        <div class="govuk-form-group govuk-!-margin-bottom-2" id="field-postcode">
 
 
-          <div class="form-group-label">
-            <label class="govuk-label--s" for="id_postcode">Enter your local area</label>
+          <div class="govuk-label">
+            <label class="govuk-label--s" for="id_postcode">Enter your postcode, town or city</label>
           </div>
-
-
-          <span class="govuk-hint" id="field-description-postcode">For example, postcode, town or city</span>
-
-
-          <div class="form-row ">
 
 
             <input type="text" name="postcode" value="{{ data['postcode'] }}" class="govuk-input govuk-!-width-one-third " maxlength="30"
                    id="id_postcode">
 
-
-          </div>
 
         </div>
 
@@ -72,12 +64,12 @@ Find free legal advice
           classes: "govuk-checkboxes--small",
           fieldset: {
           legend: {
-          text: "Select areas of law for advice",
+          text: "Select areas of legal advice",
           classes: "govuk-fieldset__legend--m"
           }
           },
           hint: {
-          text: "Choose more than one, or none if you don’t know which area your problem is in."
+          text: "You can choose more than one, or none if you don't know your problem area."
           },
           items: [
           {
@@ -176,7 +168,7 @@ Find free legal advice
       </div>
 
       <div class="form-group">
-        <button type="submit" class="govuk-button" id="searchButton" name="search">Search for advice</button>
+        <button type="submit" class="govuk-button" id="searchButton" name="search">Search</button>
       </div>
     </form>
   </div>
