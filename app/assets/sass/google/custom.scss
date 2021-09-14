@@ -15,6 +15,20 @@ ul.app--query-examples {
   margin-top: 20px;
 }
 
+.gs-per-result-labels {
+  margin-top: 5px;
+  color: #505a5f;
+
+  a.gs-label {
+    color: #505a5f !important;
+  }
+}
+
+.gsc-tabHeader {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 // Unstyled version (little styling)
 //
 #app--unstyled-cse {
