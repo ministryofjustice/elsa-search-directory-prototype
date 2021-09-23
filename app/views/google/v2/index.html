@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% set serviceName %}
-Find legal advice and support
+Search trusted information for legal advice
 {% endset %}
 
 {% block pageTitle %}
@@ -11,15 +11,13 @@ Find legal advice and support
 {% block content %}
 
 <div class="container govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds" id="app--styled-cse">
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
-  </div>
 
-  <div class="govuk-grid-column-two-thirds" id="app--styled-cse">
     <p class="govuk-body-l">Enter the word or phrase that best describes your problem. You can also click on a common search term below.</p>
-    <p class="govuk-body">All search results will only contain links to government web pages and websites of other trusted organisations that have been carefully chosen to give you the most helpful information available.</p>
+    <p class="govuk-body">Your search results will show only sources of reliable information from trusted organisations and the government. For example, Citizens Advice, Shelter and the Money Advice Service. All results are advert-free.</p>
 
     <script async src="https://cse.google.com/cse.js?cx=35494a494c787b70b"></script>
     <div class="gcse-search" data-personalizedAds="false"></div>
@@ -39,7 +37,10 @@ Find legal advice and support
         <a href="#gsc.q=benefit%20cap">benefit cap</a>
       </li>
       <li>
-        <a href="#gsc.q=benefit%20appeal">benefit appeal</a>
+        <a href="#gsc.q=challenging%20benefit%20decisions">challenging benefit decisions</a>
+      </li>
+      <li>
+        <a href="#gsc.q=appealing%20benefit%20sanctions">appealing benefit sanctions</a>
       </li>
     </ul>
 
@@ -58,6 +59,12 @@ Find legal advice and support
       <li>
         <a href="#gsc.q=loan%20sharks">loan sharks</a>
       </li>
+      <li>
+        <a href="#gsc.q=court%20letters%20for%20debt ">court letters for debt</a>
+      </li>
+      <li>
+        <a href="#gsc.q=demands%20for%20debt%20repayments">demands for debt repayments</a>
+      </li>
     </ul>
 
     <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Employment</p>
@@ -73,7 +80,13 @@ Find legal advice and support
         <a href="#gsc.q=discrimination%20at%20work">discrimination at work</a>
       </li>
       <li>
-        <a href="#gsc.q=worker%20rights">worker rights</a>
+        <a href="#gsc.q=harassment">harassment</a>
+      </li>
+      <li>
+        <a href="#gsc.q=working%20conditions">working conditions</a>
+      </li>
+      <li>
+        <a href="#gsc.q=reasonable%20adjustments%20for%20disabilities">reasonable adjustments for disabilities</a>
       </li>
     </ul>
 
@@ -81,13 +94,19 @@ Find legal advice and support
 
     <ul class="govuk-list app--query-examples">
       <li>
+        <a href="#gsc.q=estate%20agent%20and%20landlord%20disputes">estate agent and landlord disputes</a>
+      </li>
+      <li>
+        <a href="#gsc.q=housing%20repairs">housing repairs</a>
+      </li>
+      <li>
         <a href="#gsc.q=rent%20arrears">rent arrears</a>
       </li>
       <li>
         <a href="#gsc.q=eviction">eviction</a>
       </li>
       <li>
-        <a href="#gsc.q=housing%20disrepair">housing disrepair</a>
+        <a href="#gsc.q=being%20made%20homeless">being made homeless</a>
       </li>
       <li>
         <a href="#gsc.q=housing%20ombudsman">housing ombudsman</a>
