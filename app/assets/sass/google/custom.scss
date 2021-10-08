@@ -63,8 +63,9 @@ ul.app--query-examples {
     visibility: hidden;
   }
 
-  .gs-title {
-    @extend .govuk-link;
+  a.gs-title {
+    @include govuk-typography-common;
+    @include govuk-link-decoration;
 
     font-size: 19px !important;
 
@@ -73,12 +74,19 @@ ul.app--query-examples {
     }
 
     &:focus {
-      @include govuk-link-hover-decoration;
+      @include govuk-focused-text;
 
       b {
         color: $govuk-focus-text-colour;
         background-color: $govuk-focus-colour;
       }
+    }
+
+    &:hover, &:focus {
+      @include govuk-link-hover-decoration;
+
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
   }
 
