@@ -63,13 +63,23 @@ ul.app--query-examples {
     visibility: hidden;
   }
 
-  a.gs-title {
-    @include govuk-link-common;
+  .gs-title {
+    @extend .govuk-link;
 
-    text-decoration: underline !important;
     font-size: 19px !important;
 
-    b { font-size: 19px !important; }
+    b {
+      font-size: 19px !important;
+    }
+
+    &:focus {
+      @include govuk-link-hover-decoration;
+
+      b {
+        color: $govuk-focus-text-colour;
+        background-color: $govuk-focus-colour;
+      }
+    }
   }
 
   .gsc-table-cell-snippet-close {
@@ -85,7 +95,12 @@ ul.app--query-examples {
 
   .gsc-cursor-page {
     border: 1px solid #b1b4b6;
-    padding: 5px;
+    padding: 8px;
+    margin-right: 12px;
+  }
+
+  .gcsc-more-maybe-branding-root a {
+    font-size: 16px !important;
   }
 
   .gcsc-find-more-on-google-branding {
