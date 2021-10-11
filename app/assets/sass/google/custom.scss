@@ -27,10 +27,10 @@ ul.app--query-examples {
 
 .gs-per-result-labels {
   margin-top: 5px;
-  color: #505a5f;
+  color: $govuk-secondary-text-colour;
 
   a.gs-label {
-    color: #505a5f !important;
+    color: $govuk-secondary-text-colour !important;
   }
 }
 
@@ -102,7 +102,7 @@ ul.app--query-examples {
   }
 
   .gsc-cursor-page {
-    border: 1px solid #b1b4b6;
+    border: 1px solid $govuk-border-colour;
     padding: 8px;
     margin-right: 12px;
   }
